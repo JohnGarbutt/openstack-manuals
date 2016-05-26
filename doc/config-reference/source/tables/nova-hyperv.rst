@@ -19,7 +19,19 @@
    * - **[hyperv]**
      -
    * - ``dynamic_memory_ratio`` = ``1.0``
-     - (Floating point) Dynamic memory ratio Enables dynamic memory allocation (ballooning) when set to a value greater than 1. The value expresses the ratio between the total RAM assigned to an instance and its startup RAM amount. For example a ratio of 2.0 for an instance with 1024MB of RAM implies 512MB of RAM allocated at startup. Possible values: * 1.0: Disables dynamic memory allocation (Default). * Float values greater than 1.0: Enables allocation of total implied RAM divided by this value for startup. Services which consume this: * nova-compute Related options: * None
+     - (Floating point)
+        Dynamic memory ratio Enables dynamic memory allocation (ballooning) when set to a value greater than 1. The value expresses the ratio between the total RAM assigned to an instance and its startup RAM amount. For example a ratio of 2.0 for an instance with 1024MB of RAM implies 512MB of RAM allocated at startup.
+     
+         Possible values:
+         * 1.0: Disables dynamic memory allocation (Default).
+         * Float values greater than 1.0: Enables allocation of total implied RAM divided by this value for startup.
+         
+         Services which consume this:
+         * nova-compute
+         
+         Related options:
+         * None
+         
    * - ``enable_instance_metrics_collection`` = ``False``
      - (Boolean) Enable instance metrics collection Enables metrics collections for an instance by using Hyper-V's metric APIs. Collected data can by retrieved by other apps and services, e.g.: Ceilometer. Possible values: * True: Enables metrics collection. * False: Disables metric collection (Default). Services which consume this: * nova-compute Related options: * None
    * - ``instances_path_share`` =
